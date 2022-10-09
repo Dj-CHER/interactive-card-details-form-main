@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive card details form</title>
+  <link rel="stylesheet" href="./index.css">
+  
+</head>
+
+<body>
+  <script src="./code.js"></script>
+  <div class="container">
+
+    <div class="c-left">
+      <div class="bg-card-front">
+        <div class="logo">
+          <img src="./images/card-logo.svg" alt="">
+        </div>
+        <div class="card-number" id="card-number">0000 0000 0000 0000 </div>
+        <div class="card-information">
+          <span id="name">JANE APPLESEED</span>
+          <span id="date">00/00</span>
+        </div>
+      </div>
+
+      <div class="bg-card-back">
+        <span id="cvc"> 000</span>
+      </div>
+    </div> 
+
+    <!---->
+    
+    <div class="c-right">
+      <div class="c-right-content">
+        <div class="information-form" id="information-form">
+          <label for="fname">CARDHOLDER NAME</label> <br>
+          <input type="text" name="name" id="fname" placeholder="e.g. Jane Appleseed"> <br>
+          <label for="fcnumber">CARD NUMBER</label> <br>
+          <input type="text" name="cnumber" id="fcnumber" oninput="CNumber() " placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <div id="err-cnumber" style="margin-bottom: 1vw;">Wrong format, numbers only</div>
+          
+          <div class="EXP-DATE">
+            <div>
+                <label for="fdate">EXP. DATE (MM/YY)</label> <br>
+                <input type="number" name="date" id="fdate" placeholder="MM" min="1" max="12"> 
+                <input type="number"  id="fyy" placeholder="YY" min="00" max="99">
+                <div id="err-date">Can't be blank</div>
+            </div>
+            <div>
+              <label for="fcvc">CVC</label> <br>
+              <input type="text" name="cvc" id="fcvc" oninput="CVC()" placeholder="e.g. 123" maxlength="3">
+              <div id="err-cvc">Can't be blank</div>
+            </div>
+          </div>
+          <button onclick="Submission()">Confirm</button>
+        </div>
+        
+        <div class="TnkYou" id="TnkYou">
+          <img class="done" src="./images/icon-complete.svg" alt="Done">
+          <div class="thank">Thank You !</div>
+          <div class="Msga-added">We've added your card details</div>
+          <button class="Continue">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+
+</html>

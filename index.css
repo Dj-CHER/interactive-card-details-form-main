@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;600&family=Outfit:wght@100;200&family=Space+Grotesk:wght@500&display=swap');*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed';
+}
+
+.container
+{
+    position: absolute;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 30vw auto;
+
+}
+
+.container .c-left
+{
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+ 
+}
+
+.bg-card-front
+{
+    width: 30vw;
+    height: 17vw;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("./images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 10vw;
+    margin-bottom: 20vw;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.063);
+}
+
+.logo, .card-information
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logo img
+{
+    margin-top: 5px;
+    width: 5vw;
+}
+
+.card-number
+{
+    font-size: 2.2vw;
+    font-weight: 600;
+    letter-spacing: 3px;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+}
+
+.card-information
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+
+.bg-card-back
+{
+    margin-top: 30px;
+    width: 30vw;
+    height: 17vw;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("./images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 20vw;
+    margin-top: 20vw;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.063);
+}
+
+.bg-card-back #cvc
+{
+    margin-left: auto;
+    font-size: 1.5vw;
+    margin-right: 2.5vw;
+    font-weight: 900;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.container .c-right
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vw;
+}
+
+
+input
+{
+    outline: none;
+}
+
+#fname,#fcnumber
+{
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.5vw;
+    width: 20vw;
+    height: 2vw;
+    border: 1px solid rgba(0, 0, 0, 0.188);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 1vw;
+}
+
+#fname
+{
+    margin-bottom: 3vh;
+}
+
+.information-form .EXP-DATE
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+}
+
+#fdate, #fyy
+{
+    width: 3vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.188);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-top: 1vw;
+}
+
+
+#fcvc
+{
+    width: 11vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.188);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 1vw;
+}
+
+button
+{
+    width: 100%;
+    height: 3vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background:  hsl(278, 81%, 14%);
+}
+
+label
+{
+    color : hsl(278, 81%, 14%);
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+#fname, #fcnumber, #fdate, #fyy, #fcvc,button
+{
+    cursor: pointer;
+}
+
+#fname:focus, #fcnumber:focus, #fdate:focus, #fyy:focus, #fcvc:focus
+{
+    border:1px solid hsl(277, 84%, 31%);
+}
+
+.TnkYou
+{
+    visibility: hidden;   
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.done
+{
+    width: 6vw;
+}
+
+.thank
+{
+    letter-spacing: 1px;
+    font-size: 3vw;
+    font-weight: 600;
+    color: hsl(278, 81%, 14%);
+}
+
+.Msga-added
+{
+    letter-spacing: 1px;
+    font-size: 1.5vw;
+    color: rgba(0, 0, 0, 0.404);
+    font-weight: 600;
+}
+
+#err-cnumber, #err-date, #err-cvc
+{
+    color: red;
+    font-size: 1vw;
+    font-weight: 600;
+    visibility: hidden;
+}
+
+@media (max-width : 475px )
+{
+    .container
+    {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-rows: 40vw auto;
+        grid-template-columns: auto;
+    }
+
+    .container .c-left {
+        background-image: url(./images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        color: white;
+        font-weight: 500;
+    }
+
+    .bg-card-front {
+        width: 50vw;
+        height: 30vw;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-image: url(./images/bg-card-front.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
+        margin-right: auto;
+        top : 22vw;
+        z-index: 1;
+    }
+
+    .bg-card-back {
+        width: 50vw;
+        height: 30vw;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-image: url(./images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 5vw;
+        margin-left: 20vw;
+        z-index: 0;
+    }
+
+    .container .c-right
+    {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 10vw;
+        margin-top: 15vw;
+    }
+
+    #fname,#fcnumber
+    {
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 1.5vw;
+        width: 70vw;
+        height: 5vw;
+        border: 1px solid rgba(0, 0, 0, 0.188);
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 2vw;
+    }
+
+    #fdate, #fyy
+    {
+        width: 15vw;
+        height: 5vw;
+        font-size: 1.5vw;
+        letter-spacing: 1px;
+        border: 1px solid rgba(0, 0, 0, 0.188);
+        border-radius: 5px;
+        padding: 5px;
+        margin-right: 5px;
+        margin-top: 1vw;
+    }
+
+
+    #fcvc
+    {
+        width: 30vw;
+        height: 5vw;
+        font-size: 1.5vw;
+        letter-spacing: 1px;
+        border: 1px solid rgba(0, 0, 0, 0.188);
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 1vw;
+    }
+
+    label
+    {
+        color : hsl(278, 81%, 14%);
+        font-size: 4.5vw;
+        font-weight: 600;
+    }
+
+    button
+    {
+        width: 100%;
+        height: 7vw;
+        color: white;
+        font-size: 2vw;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 5px;
+        background:  hsl(278, 81%, 14%);
+        margin-top: 2vw;
+    }
+
+    .TnkYou
+    {
+        visibility: hidden;   
+        position: static;
+        transform: translateY(-55vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50vw;
+        justify-content: space-between;
+    }
+
+    .done
+    {
+        width: 15vw;
+    }
+
+    .thank
+    {
+        font-size: 5vw;
+    }
+
+    .Msga-added
+    {
+        font-size: 3vw;
+    }
+}
